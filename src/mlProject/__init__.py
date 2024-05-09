@@ -1,3 +1,4 @@
+# this file will keep all the logging that will heppen in "src" folder. 
 import os
 import sys
 import logging
@@ -14,7 +15,9 @@ logging.basicConfig(
     format= logging_str,
 
     handlers=[
+        # this will save all the logs
         logging.FileHandler(log_filepath),
+        # this will show all the logs in the terminal
         logging.StreamHandler(sys.stdout)
     ]
 )
