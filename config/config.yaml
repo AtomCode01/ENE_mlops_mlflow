@@ -1,0 +1,10 @@
+# data ingestion related configuration
+
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  # we can simpliy change this link and it will reflect on the code cause we are creating dir. so changing link doesn't effect
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequallity-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
