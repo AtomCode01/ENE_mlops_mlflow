@@ -1,9 +1,15 @@
 artifacts_root: artifacts
 # data ingestion related configuration
 
-data_ingestion:
+data_ingestion: # we need to ingest data (get data) in order to work on it
   root_dir: artifacts/data_ingestion
   # we can simpliy change this link and it will reflect on the code cause we are creating dir. so changing link doesn't effect
   source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+
+data_validation:  # To train model we need to validate data, if status.txt is carupt then what's the point of training model
+  root_dir : artifacts/data_validation
+  unzip_data_dir : artifacts/data_ingestion/winequality-red.csv
+  STATUS_FILE : artifacts/data_validation/status.txt
