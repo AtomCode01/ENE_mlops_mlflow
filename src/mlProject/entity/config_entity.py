@@ -16,3 +16,20 @@ class DataValidationConfig:
     STATUS_FILE : str
     unzip_data_file : Path
     all_shecma : dict
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path
+
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir : Path
+    test_data_path : Path
+    train_data_path : Path
+    model_name : str
+    alpha : float       #---------- from params.yaml
+    l1_ratio : float    #--------|
+    target_column : str #========== from schema.yaml

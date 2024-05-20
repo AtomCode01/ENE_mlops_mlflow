@@ -21,10 +21,10 @@ class DataValidation:
             if cols not in all_cols:
                 validation_status = False
                 with open(self.config.STATUS_FILE, 'w') as f:
-                    f.write(f"Validation status {validation_status}")
+                    f.write(f"Validation status: {validation_status}")
             else:
                 validation_status = True
                 with open(self.config.STATUS_FILE, 'w') as f:
-                    f.write(f"Validation status {validation_status}")
+                    f.write(f"Validation status: {validation_status}")
         return validation_status
         
